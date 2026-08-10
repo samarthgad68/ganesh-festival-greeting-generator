@@ -1,0 +1,6 @@
+{
+  "name": "गणेशोत्सव शुभेच्छा जनरेटर - Ganesh Festival Greeting Generator",
+  "description": "100% Free Production Ready Full Stack Ganesh Festival Greeting Generator with Razorpay Payment and Sharp Image Processing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
