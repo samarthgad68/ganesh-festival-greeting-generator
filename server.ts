@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import fs from 'fs';
 import cors from 'cors';
 import { createServer as createViteServer } from 'vite';
 import paymentRoutes from './routes/paymentRoutes';
@@ -18,12 +19,20 @@ async function startServer() {
   const publicDir = path.join(process.cwd(), 'public');
   app.use(express.static(publicDir));
 
-  // Serve images from root assets directory
+  // Serve generated, uploads, and assets directories as static folders
+  const generatedDir = path.join(process.cwd(), 'generated');
+  const uploadsDir = path.join(process.cwd(), 'uploads');
   const rootAssetsDir = path.join(process.cwd(), 'assets');
+
+  if (!fs.existsSync(generatedDir)) fs.mkdirSync(generatedDir, { recursive: true });
+  if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
+  if (!fs.existsSync(rootAssetsDir)) fs.mkdirSync(rootAssetsDir, { recursive: true });
+
+  app.use('/generated', express.static(generatedDir));
+  app.use('/uploads', express.static(uploadsDir));
   app.use('/assets', express.static(rootAssetsDir));
   app.use('/assets/Images', express.static(path.join(rootAssetsDir, 'Images')));
   app.use('/assets/images', express.static(path.join(rootAssetsDir, 'Images')));
-  app.use('/assets/image', express.static(path.join(rootAssetsDir, 'Images')));
 
   // Health check
   app.get('/api/health', (req, res) => {
