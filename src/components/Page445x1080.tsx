@@ -89,7 +89,7 @@ export const Page445x1080: React.FC<Page445x1080Props> = ({
           <text
             x="330"
             y={y1}
-            fontFamily="'Noto Sans Devanagari', 'Lohit Devanagari', 'Georgia', 'Times New Roman', 'DejaVu Serif', serif"
+            fontFamily="Noto Sans Devanagari, sans-serif"
             fontSize={fontSizeL1}
             fontWeight="bold"
             fill="#c00000"
@@ -102,7 +102,7 @@ export const Page445x1080: React.FC<Page445x1080Props> = ({
           <text
             x="330"
             y={y2}
-            fontFamily="'Noto Sans Devanagari', 'Lohit Devanagari', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif"
+            fontFamily="Noto Sans Devanagari, sans-serif"
             fontSize={fontSizeL2}
             fontWeight="bold"
             fill="#000000"
@@ -114,7 +114,7 @@ export const Page445x1080: React.FC<Page445x1080Props> = ({
           <text
             x="330"
             y={y3}
-            fontFamily="'Noto Sans Devanagari', 'Lohit Devanagari', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif"
+            fontFamily="Noto Sans Devanagari, sans-serif"
             fontSize={fontSizeL3}
             fontWeight="normal"
             fill="#000000"
@@ -126,7 +126,7 @@ export const Page445x1080: React.FC<Page445x1080Props> = ({
           <text
             x="330"
             y={y4}
-            fontFamily="'Noto Sans Devanagari', 'Lohit Devanagari', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif"
+            fontFamily="Noto Sans Devanagari, sans-serif"
             fontSize={fontSizeL4}
             fontWeight="normal"
             fill="#000000"

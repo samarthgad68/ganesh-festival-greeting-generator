@@ -43,8 +43,8 @@ async function safeFetchJson(url: string, options?: RequestInit) {
 }
 
 export default function App() {
-  const [step, setStep] = useState<AppStep>('GENERATOR_FORM');
-  const [paymentToken, setPaymentToken] = useState<string | null>('demo_payment_token');
+  const [step, setStep] = useState<AppStep>('HOME');
+  const [paymentToken, setPaymentToken] = useState<string | null>(null);
   const [isProcessingPayment, setIsProcessingPayment] = useState<boolean>(false);
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [generatedGreetings, setGeneratedGreetings] = useState<GeneratedGreeting[]>([]);

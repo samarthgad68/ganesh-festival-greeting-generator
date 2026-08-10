@@ -284,22 +284,22 @@ function generateTemplateSvg(
       <!-- Bottom Personalization Section directly on the blank 1080x445 bottom area -->
       <g text-anchor="middle">
         <!-- Line 1: Bold Reddish-Maroon (#c00000) -->
-        <text x="330" y="${y1}" font-family="'Noto Sans Devanagari', 'Lohit Devanagari', 'Georgia', 'Times New Roman', 'DejaVu Serif', serif" font-size="${fontSizeL1}" font-weight="bold" fill="#c00000" text-anchor="middle">
+        <text x="330" y="${y1}" font-family="Noto Sans Devanagari, sans-serif" font-size="${fontSizeL1}" font-weight="bold" fill="#c00000" text-anchor="middle">
           ${line1Escaped}
         </text>
 
         <!-- Line 2: Black (#000000) -->
-        <text x="330" y="${y2}" font-family="'Noto Sans Devanagari', 'Lohit Devanagari', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" font-size="${fontSizeL2}" font-weight="bold" fill="#000000" text-anchor="middle">
+        <text x="330" y="${y2}" font-family="Noto Sans Devanagari, sans-serif" font-size="${fontSizeL2}" font-weight="bold" fill="#000000" text-anchor="middle">
           ${line2Escaped}
         </text>
 
         <!-- Line 3: Black (#000000) -->
-        <text x="330" y="${y3}" font-family="'Noto Sans Devanagari', 'Lohit Devanagari', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" font-size="${fontSizeL3}" font-weight="normal" fill="#000000" text-anchor="middle">
+        <text x="330" y="${y3}" font-family="Noto Sans Devanagari, sans-serif" font-size="${fontSizeL3}" font-weight="normal" fill="#000000" text-anchor="middle">
           ${line3Escaped}
         </text>
 
         <!-- Line 4: Black (#000000) -->
-        <text x="330" y="${y4}" font-family="'Noto Sans Devanagari', 'Lohit Devanagari', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" font-size="${fontSizeL4}" font-weight="normal" fill="#000000" text-anchor="middle">
+        <text x="330" y="${y4}" font-family="Noto Sans Devanagari, sans-serif" font-size="${fontSizeL4}" font-weight="normal" fill="#000000" text-anchor="middle">
           ${line4Escaped}
         </text>
       </g>

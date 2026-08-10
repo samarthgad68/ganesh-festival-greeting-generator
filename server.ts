@@ -19,7 +19,22 @@ async function startServer() {
   const publicDir = path.join(process.cwd(), 'public');
   app.use(express.static(publicDir));
 
-  // Serve generated, uploads, and assets directories as static folders
+  // Ensure fonts directory and system font cache are synced
+  try {
+    const fontsDir = path.join(process.cwd(), 'fonts');
+    const systemFontsDir = path.join(process.env.HOME || '/root', '.local', 'share', 'fonts');
+    if (fs.existsSync(fontsDir)) {
+      if (!fs.existsSync(systemFontsDir)) fs.mkdirSync(systemFontsDir, { recursive: true });
+      const fontFiles = fs.readdirSync(fontsDir);
+      for (const file of fontFiles) {
+        if (file.endsWith('.ttf')) {
+          fs.copyFileSync(path.join(fontsDir, file), path.join(systemFontsDir, file));
+        }
+      }
+    }
+  } catch (err) {
+    console.error('Error syncing font files:', err);
+  }
   const generatedDir = path.join(process.cwd(), 'generated');
   const uploadsDir = path.join(process.cwd(), 'uploads');
   const rootAssetsDir = path.join(process.cwd(), 'assets');
